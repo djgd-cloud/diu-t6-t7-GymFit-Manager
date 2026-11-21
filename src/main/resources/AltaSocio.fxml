@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.input.KeyCodeCombination?>
 <?import javafx.scene.layout.AnchorPane?>
-
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
    <children>
@@ -80,5 +90,80 @@
             </Menu>
         </menus>
       </MenuBar>
+      <TableView layoutX="706.0" layoutY="174.0" prefHeight="200.0" prefWidth="487.0" AnchorPane.leftAnchor="706.0" AnchorPane.rightAnchor="87.59999999999991" AnchorPane.topAnchor="174.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem mnemonicParsing="false" text="Editar" />
+                  <MenuItem mnemonicParsing="false" text="Copiar" />
+                  <MenuItem mnemonicParsing="false" text="Renovar" />
+                  <MenuItem mnemonicParsing="false" text="Congelar" />
+                  <MenuItem mnemonicParsing="false" text="Duplicar" />
+                  <MenuItem mnemonicParsing="false" text="Propiedades" />
+                  <MenuItem mnemonicParsing="false" text="Notas" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Dar de baja" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+      <ToolBar layoutY="30.0" prefHeight="40.0" prefWidth="318.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+        <items>
+          <Button mnemonicParsing="false" text="Nuevo">
+               <tooltip>
+                  <Tooltip text="Dar de alta un socio nuevo (Ctrl+N)" />
+               </tooltip>
+            </Button>
+            <Button mnemonicParsing="false" text="Guardar">
+               <tooltip>
+                  <Tooltip text="Guardar progreso (Ctrl + S)" />
+               </tooltip>
+            </Button>
+            <Button mnemonicParsing="false" text="Buscar">
+               <tooltip>
+                  <Tooltip text="Buscar socio (Ctrl+F)" />
+               </tooltip>
+            </Button>
+            <Button mnemonicParsing="false" text="Renovar">
+               <tooltip>
+                  <Tooltip text="Renovar la cuota del socio seleccionado" />
+               </tooltip>
+            </Button>
+            <Button mnemonicParsing="false" text="Imprimir">
+               <tooltip>
+                  <Tooltip text="Imprimir el listado de socios" />
+               </tooltip>
+            </Button>
+        </items>
+      </ToolBar>
+      <GridPane layoutX="95.0" layoutY="156.0" prefHeight="322.0" prefWidth="314.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="18.0" prefWidth="343.0" text="ALTA DE SOCIO NUEVO" textAlignment="CENTER" GridPane.columnSpan="2">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
    </children>
 </AnchorPane>
